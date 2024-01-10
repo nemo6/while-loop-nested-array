@@ -85,3 +85,15 @@ let m = [
 ]
 
 mapLevel(m)
+
+// while loop nested array
+
+function forEachNested( m ){
+	// m = [m]
+	while ( m.length ){
+		let currentValue = m.shift()
+		console.log("currentValue",currentValue)
+		m.unshift( ... Object.values(currentValue) )
+		console.log(m)
+	}
+}
